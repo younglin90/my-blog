@@ -95,7 +95,8 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
-        <h1>부랄부랄부랄</h1>
+        <h1>부랄부랄부랄</h1> 
+        <img src={require('./assets/1.jpg').default} alt="Example banner"/>
         {/* <HomepageFeatures /> */}
       </main>
     </Layout>
