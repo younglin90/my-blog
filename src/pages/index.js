@@ -34,7 +34,7 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
       {/* <HomepageHeader /> */}
       <main>
-        부랄부랄부랄 
+        <h1>부랄부랄부랄</h1>
         {/* <HomepageFeatures /> */}
       </main>
     </Layout>
