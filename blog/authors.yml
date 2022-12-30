@@ -15,3 +15,10 @@ slorber:
   title: Docusaurus maintainer
   url: https://sebastienlorber.com
   image_url: https://github.com/slorber.png
+
+thomas:
+  name: 토마스
+  title: 박사
+  url: https://github.com/younglin90
+  image_url: /img/logo.svg
+

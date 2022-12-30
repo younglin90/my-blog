@@ -6,13 +6,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'YoungLinYoo',
-  tagline: 'YoungLinYoo',
-  url: 'https://younglinyoo.vercel.app/',
+  title: 'thomas-physics',
+  tagline: 'thomas-physics',
+  url: 'https://thomas-physics.vercel.app/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.svg',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -32,13 +32,13 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        // docs: {
+        //   sidebarPath: require.resolve('./sidebars.js'),
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl:
+        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        // },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
@@ -53,21 +53,41 @@ const config = {
     ],
   ],
 
+     
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs-projects',
+        path: 'docs-projects',
+        routeBasePath: 'docs-projects',
+        sidebarPath: require.resolve('./sidebars.js'),
+      }, 
+    ],
+  ],
+  
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Home',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Logo',
+          src: '/img/logo.svg',
         },
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            routeBasePath: '/', 
+            docId: '개요',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Wiki',
+          },
+          {
+            to: '/docs-projects/intro',    // ./docs-api/Intro.md
+            label: 'Projects',
+            position: 'left',
+            activeBaseRegex: `/docs-projects/intro`,
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -80,6 +100,7 @@ const config = {
       footer: {
         style: 'dark',
         links: [
+          /*
           {
             title: 'Docs',
             items: [
@@ -89,6 +110,8 @@ const config = {
               },
             ],
           },
+          */
+          /*
           {
             title: 'Community',
             items: [
@@ -106,6 +129,8 @@ const config = {
               },
             ],
           },
+          */
+          /*
           {
             title: 'More',
             items: [
@@ -119,14 +144,17 @@ const config = {
               },
             ],
           },
+          */
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Thomas, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
+
+
 };
 
 module.exports = config;
